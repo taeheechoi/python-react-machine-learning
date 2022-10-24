@@ -17,6 +17,20 @@ Predict weight based on user's gender and height
 ### How to use
 Select your gender and enter your height then click Prediction button
 
+### How to run backend and frontend
+- Backend
+    ```
+    (Windows)
+    backend>venv\script\activate
+    venv>python manage.py runserver
+    ```
+- Frontend
+    ```
+    (Windows)
+    frontend>npm start
+    ```
+
+
 ### Screenshot
 ![](assets/screenshot.png)
 
