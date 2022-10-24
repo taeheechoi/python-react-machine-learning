@@ -16,23 +16,36 @@ import axios from "axios";
 
 export default function App() {
 
+
+  const [gender, setGender] = useState('female')
+  const [height, setHeight] = useState(0)
   const [weight, setWeight] = useState(null)
-  
+
+  const isFormValid = !gender.length || !height.length
+
+  const onGenderChange = (event) => {
+    setGender(event.target.value)
+    setWeight(null)
+  }
+
+  const onHeightChange = (event) => {
+    setHeight(event.target.value)
+    setWeight(null)
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget)
 
     axios({
       url: "http://127.0.0.1:8000/v1/api/weight/",
       method: "POST",
       data: {
-        gender: data.get('gender'),
-        height: parseFloat(data.get('height'))
+        gender: gender,
+        height: parseFloat(height)
       }
     })
       .then(res => {
-         setWeight(res.data.weight)
+        setWeight(res.data.weight)
       }
       )
   };
@@ -57,35 +70,37 @@ export default function App() {
               aria-labelledby="gender-group-label"
               name="gender"
               defaultValue="female"
-              required
+              value={gender}
+              onChange={onGenderChange}
             >
               <FormControlLabel value="female" control={<Radio />} label="Female" />
               <FormControlLabel value="male" control={<Radio />} label="Male" />
-
             </RadioGroup>
 
             <FormLabel id="height-label">Enter your height:</FormLabel>
             <Input
-              id="height"
               name="height"
               endAdornment={<InputAdornment position="end">cm</InputAdornment>}
               inputProps={{
                 'aria-label': 'height',
               }}
-              required
+              onChange={onHeightChange}
+              value={height}
+
             />
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              disabled={isFormValid}
             >
               Prediction
             </Button>
           </FormControl>
 
         </Box>
-        <FormLabel id="height-label">Weight Predicted: {weight} kg</FormLabel>
+        <FormLabel id="height-label">Weight Predicted: {weight > 0 && <> {weight} kg </>} </FormLabel>
       </Box>
 
     </Container>
