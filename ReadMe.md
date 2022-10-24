@@ -1,6 +1,9 @@
 # About this app
 Predict weight based on user's gender and height
 
+### Screenshot
+![](assets/screenshot.png)
+
 ### Packages and Libraries
 - Backend
     - Django==4.1.2
@@ -29,10 +32,6 @@ Select your gender and enter your height then click Prediction button
     (Windows)
     frontend>npm start
     ```
-
-
-### Screenshot
-![](assets/screenshot.png)
 
 ### References
 - https://betterprogramming.pub/create-a-machine-learning-api-with-django-rest-framework-967571640c46
