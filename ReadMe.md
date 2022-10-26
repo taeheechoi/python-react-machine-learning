@@ -37,3 +37,10 @@ Select your gender and enter your height then click Prediction button
 ### References
 - https://betterprogramming.pub/create-a-machine-learning-api-with-django-rest-framework-967571640c46
 - https://mui.com/material-ui/react-radio-button/
+- https://blog.vivekshukla.xyz/uploading-file-using-api-django-rest-framework/
+- https://stackoverflow.com/questions/35522768/django-serializer-imagefield-to-get-full-url
+- https://www.jaided.ai/easyocr/tutorial/
+- https://testdriven.io/blog/drf-views-part-1/
+- https://testdriven.io/blog/drf-views-part-2/
+- https://testdriven.io/blog/drf-views-part-3/
+- https://testdriven.io/blog/drf-serializers/
