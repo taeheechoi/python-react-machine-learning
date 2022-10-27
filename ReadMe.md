@@ -29,10 +29,13 @@ Select your gender and enter your height then click Prediction button
     - pandas==1.5.1
     - numpy==1.23.4
     - joblib==1.2.0
+    - easyocr==1.6.2
+    
 - Frontend
     - "react": "^18.2.0",
     - @mui/material": "^5.10.10"
     - "axios": "^1.1.3"
+    - "react-dropzone": "^14.2.3",
 
 ### References
 - https://betterprogramming.pub/create-a-machine-learning-api-with-django-rest-framework-967571640c46
@@ -44,3 +47,5 @@ Select your gender and enter your height then click Prediction button
 - https://testdriven.io/blog/drf-views-part-2/
 - https://testdriven.io/blog/drf-views-part-3/
 - https://testdriven.io/blog/drf-serializers/
+- https://blog.logrocket.com/create-drag-and-drop-component-react-dropzone/
+- https://react-dropzone.js.org/
