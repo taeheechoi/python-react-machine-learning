@@ -18,8 +18,8 @@ Predict weight based on user's gender and height
     ```
 
 ### How to use
-Select your gender and enter your height then click Prediction button
-
+- Weight Prediction:Select your gender and enter your height then click Prediction button
+- Extracing Text: Drop and drop a image file contains text (Supported languages: English, Korean)
 ### Packages and Libraries
 - Backend
     - Django==4.1.2
